@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "release": {
+    "kind": "derived_transformer_overlay",
+    "release_repository": "ahm22004/kaomnique",
+    "source_repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+    "source_revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+    "alignment_encoder_repository": "ggml-org/Qwen2.5-Omni-3B-GGUF",
+    "alignment_encoder_revision": "75f1b73b657a50f5092502799457ccb4a4a1f9df",
+    "is_standalone_pipeline": false,
+    "distributed_payload": "transformer/diffusion_pytorch_model.safetensors"
+  },
+  "payload": {
+    "relative_path": "transformer/diffusion_pytorch_model.safetensors",
+    "sha256": "68243822bb2a42927fbf02ca6da9ee5a1d5dcb739966f64ee0a831f22a72bee4",
+    "size_bytes": 6365083984,
+    "origin": "derived_from_released_kandinsky_transformer",
+    "device": "cpu",
+    "runtime_dtype": "bfloat16",
+    "storage_dtypes": {
+      "BF16": {
+        "tensor_count": 1976,
+        "parameter_count": 3165348624
+      },
+      "F32": {
+        "tensor_count": 423,
+        "parameter_count": 8510720
+      },
+      "mixed": true
+    },
+    "smoke_test": true
+  },
+  "configuration": {
+    "relative_path": "transformer/config.json",
+    "sha256": "346e9eaa26ed710bd32089d8c8578667fd21b90520f185098f44b310b9c53a50",
+    "size_bytes": 720,
+    "in_text_dim": 2048,
+    "source_in_text_dim": 3584
+  },
+  "provenance": {
+    "source_transformer": {
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "transformer/diffusion_pytorch_model.safetensors",
+      "sha256": "b1b52668561d9138d93bb4da13c9999e615bf569be9f8cf65732d54652447f53",
+      "size_bytes": 6381599096,
+      "parameter_count": 3177988112,
+      "source_unchanged": true
+    },
+    "source_configuration": {
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "transformer/config.json",
+      "sha256": "4de144f71528df712a020dabc79001aa4d353fd807a6456930397b115567992c",
+      "size_bytes": 720,
+      "in_text_dim": 3584
+    },
+    "modified_tensors": [
+      {
+        "name": "video_text_embeddings.in_layer.weight",
+        "released_shape": [
+          1792,
+          3584
+        ],
+        "derived_shape": [
+          1792,
+          2048
+        ],
+        "released_sha256": "fe8d206ed95298ee2b3e55fc638ed54937d32b2e5dfa91901608c937234fc90d",
+        "derived_sha256": "5d39c31cf727d0e009afcac60793701ce4708244e02590bdd915e9fcb8efae64",
+        "fold_max_abs_error": 6.491598369962048e-06
+      },
+      {
+        "name": "audio_text_embeddings.in_layer.weight",
+        "released_shape": [
+          896,
+          3584
+        ],
+        "derived_shape": [
+          896,
+          2048
+        ],
+        "released_sha256": "097ff5f9792f7a4d4ada37915aa284865e7083b736dd79f0721e1695c4f4ab4e",
+        "derived_sha256": "1c1293003caaf76ff3257c6e36ffeab2425fecce0a9e00da734a519fb321e838",
+        "fold_max_abs_error": 8.071119719232911e-07
+      }
+    ],
+    "replaced_prompt_encoder": {
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "index_path": "text_encoder/model.safetensors.index.json",
+      "index_total_size": 16584333312,
+      "dtype": "BF16",
+      "parameter_count": 8292166656,
+      "shards": [
+        {
+          "relative_path": "text_encoder/model-00001-of-00005.safetensors",
+          "sha256": "e97b877e47fde53a6c6e77aafb36e58e91ee9d95c4a3eeac6f1b5c0e6a1c986e",
+          "size_bytes": 3900233256
+        },
+        {
+          "relative_path": "text_encoder/model-00002-of-00005.safetensors",
+          "sha256": "a9a300a43b4724eee2abe7c18ceb26768d0ab011eb0cad19d9bfd2476a24d024",
+          "size_bytes": 3864726320
+        },
+        {
+          "relative_path": "text_encoder/model-00003-of-00005.safetensors",
+          "sha256": "111223d173e00bbee81cba1216fad28668df3476706b7fd26f4d5b50f8b3a507",
+          "size_bytes": 3864726424
+        },
+        {
+          "relative_path": "text_encoder/model-00004-of-00005.safetensors",
+          "sha256": "ef47f634fa57d46ee134edcc09f34085a47da1e16c12a2abe0d67118be6d72ed",
+          "size_bytes": 3864733680
+        },
+        {
+          "relative_path": "text_encoder/model-00005-of-00005.safetensors",
+          "sha256": "0c859795ad3a627a9b95bcb762e059d5b768a4a36fdd4affeff269d93fdecc67",
+          "size_bytes": 1089994880
+        }
+      ]
+    },
+    "alignment_target": {
+      "repository": "unsloth/Qwen2.5-VL-7B-Instruct-GGUF",
+      "revision": "68bb8bc4b7df5289c143aaec0ab477a7d4051aab",
+      "relative_path": "Qwen2.5-VL-7B-Instruct-Q4_K_M.gguf",
+      "sha256": "d16776dcd9a28d42758c2958ed3a752aabf20a305252cd64ff2be72b4a78c503",
+      "size_bytes": 4683072384,
+      "license": "apache-2.0",
+      "role": "fit_target_only_not_distributed"
+    }
+  },
+  "external_components": [
+    {
+      "component": "prompt_encoder",
+      "repository": "ggml-org/Qwen2.5-Omni-3B-GGUF",
+      "revision": "75f1b73b657a50f5092502799457ccb4a4a1f9df",
+      "relative_path": "Qwen2.5-Omni-3B-Q4_K_M.gguf",
+      "sha256": "4b0bd358c1e9ec55dd3055ef6d71c958c821533d85916a10cfa89c4552a86e29",
+      "size_bytes": 2104931648,
+      "parameter_count": 3397103616,
+      "license": "qwen-research",
+      "required": true
+    },
+    {
+      "component": "vae",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "vae/diffusion_pytorch_model.safetensors",
+      "sha256": "7c68a6295f9034a88225fbafb1f3258291a08d57a1fdb938233fa57b1b8f4883",
+      "size_bytes": 985943868,
+      "parameter_count": 246478803,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "audio_vae",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "audio_vae/diffusion_pytorch_model.safetensors",
+      "sha256": "dfccdf9d0d8d3de270a23b097400f21adb91f4ec683bdc26369cb65b08a5af87",
+      "size_bytes": 1711158920,
+      "parameter_count": 305613186,
+      "excluded_duplicate_parameter_count": 122155368,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "vocoder",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "vocoder/diffusion_pytorch_model.safetensors",
+      "sha256": "abf0536824bdce8dcf8ee10b815770111f4b5d05d0122e1bab4b5719324edca7",
+      "size_bytes": 488692656,
+      "parameter_count": 122155368,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "text_encoder_2",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "text_encoder_2/model.safetensors",
+      "sha256": "5f02387099a844470dcf7e621cb0af6106bb7ce428666e3bdffbd80b777b458a",
+      "size_bytes": 492263008,
+      "parameter_count": 123060480,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "tokenizer_2",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "tokenizer_2/tokenizer.json",
+      "sha256": "6d9109cc838977f3ca94a379eec36aecc7c807e1785cd729660ca2fc0171fb35",
+      "size_bytes": 3642073,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "tokenizer_2_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "tokenizer_2/tokenizer_config.json",
+      "sha256": "19cf05e7378efc6096e8f1ed54c0a87855802f7d4f85610a66af8b821b5bd6a3",
+      "size_bytes": 349,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "scheduler_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "scheduler/scheduler_config.json",
+      "sha256": "058abd9834b1d780a1bcb3626709cdb84d19d0764153e104fe0cff03f70efa88",
+      "size_bytes": 580,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "text_encoder_2_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "text_encoder_2/config.json",
+      "sha256": "d5f57048c92560a448e1189485f6aa993eeb3500f18f897e1069395811b39406",
+      "size_bytes": 944,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "vae_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "vae/config.json",
+      "sha256": "8dd1ef5ce49d2a56cdb5ea4c6553244320cd7185918463578c4c08a31f55e50a",
+      "size_bytes": 718,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "audio_vae_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "audio_vae/config.json",
+      "sha256": "f6c2ccb3ec16e5bd5d1277aad0e42830ea4620e4bf0c1bc82940c27a4b57517d",
+      "size_bytes": 826,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "vocoder_config",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "vocoder/config.json",
+      "sha256": "0364767fc6472fe36b4c96a6dd522f845b24e1ede7a6ea037b58e8c5557e2b89",
+      "size_bytes": 483,
+      "license": "mit",
+      "required": true
+    },
+    {
+      "component": "model_index",
+      "repository": "kandinskylab/Kandinsky-6.0-Lite-distill-5s-Diffusers",
+      "revision": "4c487e8b4aeeb9059e5a77905aa2ddb59ec28f81",
+      "relative_path": "model_index.json",
+      "sha256": "143c22aba7263a1d4e2717b9b63283283d4f06dc5513817300e38d9893f6d1e7",
+      "size_bytes": 995,
+      "license": "mit",
+      "required": true
+    }
+  ],
+  "parameter_accounting": {
+    "released_active_parameter_count": 12267462605,
+    "source_transformer_parameter_count": 3177988112,
+    "derived_transformer_parameter_count": 3173859344,
+    "folded_parameter_reduction": 4128768,
+    "mixed_family_active_parameter_count": 7368270797,
+    "parameter_ceiling": 10000000000,
+    "below_parameter_ceiling": true,
+    "nested_vocoder_counted_once": true
+  },
+  "alignment": {
+    "alignment_class": "learned_alignment",
+    "method": "closed_form_ridge_state_space",
+    "gradient_training_used": false,
+    "ours_dimension": 2048,
+    "target_dimension": 3584,
+    "connector_shape": [
+      2048,
+      3584
+    ],
+    "connector_parameter_count": 7340032,
+    "connector_sha256": "12f9e644f70999c1e251b9d0a0ff43e6ac4af1e676e54fdb93c54fa9af39caee",
+    "states_sha256": "e21912a6400d3dbf2b98facb3b097027fbdf1ab9f098476eee922d81c55b1d60",
+    "selection_fit_tokens": 1505,
+    "final_selected_connector_fit_tokens": 1658,
+    "final_selected_connector_fit_scope": "all training-pool tokens after method selection; holdout excluded",
+    "final_selected_connector_holdout_excluded": true,
+    "research_evidence_distributed": false,
+    "split": {
+      "source": "prompt",
+      "training_pool_prompts": 60,
+      "validation_prompts": 4,
+      "holdout_prompts": 18,
+      "training_pool_tokens": 1658,
+      "candidate_fit_tokens": 1505,
+      "validation_tokens": 153,
+      "holdout_tokens": 453,
+      "holdout_used_for_selection": false
+    },
+    "selection": {
+      "video_text_embeddings": {
+        "selected": "state",
+        "validation_fit_tokens": 1505,
+        "holdout_final_connector_fit_tokens": 1658,
+        "state_validation_cosine": 0.9891822553754807,
+        "branch_validation_cosine": 0.981849016610711,
+        "holdout_cosine": 0.9933685236539229,
+        "holdout_r2": 0.9104434511275408
+      },
+      "audio_text_embeddings": {
+        "selected": "state",
+        "validation_fit_tokens": 1505,
+        "holdout_final_connector_fit_tokens": 1658,
+        "state_validation_cosine": 0.9726540702574094,
+        "branch_validation_cosine": 0.9473240938024817,
+        "holdout_cosine": 0.9851682843030016,
+        "holdout_r2": 0.8456373466745108
+      }
+    }
+  },
+  "evaluation": {
+    "run_id": "run-qwen2.5-omni-3b+kandinsky6-lite-text-video",
+    "evaluation_manifest": {
+      "id": "kandinsky6-text-video-smoke",
+      "sha256": "270bc2664f9112eff9bead1e93da0c14b282f3be241d3bda90fe9a4f0e625f76"
+    },
+    "evaluated_paths": [
+      "text->video"
+    ],
+    "unmeasured_paths": [
+      "text->audio",
+      "image->video"
+    ],
+    "text->video": {
+      "quality": 0.0,
+      "quality_measured": true,
+      "quality_metric": "answer_match",
+      "quality_n": 1,
+      "judge_answers": [
+        "No."
+      ],
+      "judge": {
+        "runner": "llama_server",
+        "device": "cpu",
+        "repository": "ggml-org/Qwen2.5-Omni-3B-GGUF",
+        "revision": "75f1b73b657a50f5092502799457ccb4a4a1f9df",
+        "relative_path": "Qwen2.5-Omni-3B-Q4_K_M.gguf",
+        "sha256": "4b0bd358c1e9ec55dd3055ef6d71c958c821533d85916a10cfa89c4552a86e29",
+        "size_bytes": 2104931648,
+        "projector_relative_path": "mmproj-Qwen2.5-Omni-3B-Q8_0.gguf",
+        "projector_sha256": "4e6c816cd33f7298d07cb780c136a396631e50e62f6501660271f8c6e302e565",
+        "projector_size_bytes": 1538031328,
+        "question": "Does this video contain {reference}? Answer yes or no.",
+        "max_tokens": 16
+      },
+      "stable": true,
+      "status": "evaluated",
+      "production_quality_measured": false,
+      "geometry": {
+        "height": 16,
+        "width": 16,
+        "num_frames": 5,
+        "frame_rate": 24.0,
+        "num_inference_steps": 1,
+        "seed": 0
+      },
+      "runtime": {
+        "device": "cpu",
+        "dtype": "bfloat16",
+        "python": "3.12.13",
+        "torch": "2.15.0+cpu",
+        "diffusers": "0.43.0",
+        "transformers": "5.23.0",
+        "model_load_ms": 3751.329744933173,
+        "generation_ms": 89203.61761609092,
+        "wall_ms": 92954.9473610241,
+        "peak_memory_mb": 5150.765625
+      },
+      "artifact": {
+        "relative_path": null,
+        "path_redaction": "local absolute path omitted from public export",
+        "sha256": "01fb01075a0482f79053ab57426c069e5c2f406ec01320bc2b69fdd92f13abab",
+        "size_bytes": 1775,
+        "origin": "local_generation",
+        "container": "mp4",
+        "smoke_test": true
+      }
+    }
+  },
+  "claims": {
+    "target_coverage": false,
+    "quality_benchmark": false,
+    "under_parameter_ceiling": true,
+    "executable_evaluated_path_verified": true,
+    "representation_fidelity_measured": true,
+    "production_video_quality_measured": false,
+    "audio_generation_quality_measured": false,
+    "image_to_video_quality_measured": false
+  },
+  "license": {
+    "release_license": "other",
+    "release_license_name": "qwen-research",
+    "non_commercial": true,
+    "commercial_use_requires_separate_license": true,
+    "kandinsky_source_license": "mit",
+    "qwen_omni_license": "qwen-research",
+    "required_attribution": "Improved using Qwen",
+    "required_notice": "Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT, Copyright (c) Alibaba Cloud. All Rights Reserved."
+  }
+}
